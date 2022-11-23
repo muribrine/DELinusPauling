@@ -37,44 +37,6 @@ const distributionOrder = [
 const weigthOrder = [
 	2, 2, 6, 2, 6, 2, 10, 6, 2, 10, 6, 2, 14, 10, 6, 2, 14, 10, 6,
 ];
-const exponents = [
-	'²',
-	'²',
-	'⁶',
-	'²',
-	'⁶',
-	'²',
-	'¹⁰',
-	'⁶',
-	'²',
-	'¹⁰',
-	'⁶',
-	'²',
-	'¹⁴',
-	'¹⁰',
-	'⁶',
-	'²',
-	'¹⁴',
-	'¹⁰',
-	'⁶',
-];
-
-const lastExponents = {
-	1: '¹',
-	2: '²',
-	3: '³',
-	4: '⁴',
-	5: '⁵',
-	6: '⁶',
-	7: '⁷',
-	8: '⁸',
-	9: '⁹',
-	10: '¹⁰',
-	11: '¹¹',
-	12: '¹²',
-	13: '¹³',
-	14: '¹⁴',
-};
 
 function Distributor(target) {
 	let sum = 0;
@@ -94,10 +56,10 @@ function MakeResults(target) {
 	let v = 0;
 	let mixedResults = [];
 	while (v != i) {
-		mixedResults.push(distributionOrder[v] + exponents[v]);
+		mixedResults.push(distributionOrder[v] + weigthOrder[v]);
 		v += 1;
 	}
-	mixedResults.push(distributionOrder[v] + lastExponents[lastExponent]);
+	mixedResults.push(distributionOrder[v] + lastExponent);
 	return mixedResults;
 }
 function SegmentResult(target) {

@@ -23,6 +23,7 @@ in 22 November 2022
 
 header {
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 
